@@ -1,17 +1,14 @@
 #main:focus {
-    outline: none;
+    outline: navy;
 }
 
-
-/* ===================================== HEADER STYLE ========================================= */
-
-.main-header {
+.cardsdelt-header {
     width: 100%;
     height: 79px;
 
     background-color: #144e64;}
 
-.main-header .title {
+.cardsdelt-header .title {
     float: left;
     text-transform: uppercase;
 
@@ -30,7 +27,7 @@
     transform: translateY(-50%);
 }
 
-.main-header .zip-link {
+.cardsdelt-header .zip-link {
     float: right;
 
     width: 16%;
@@ -39,7 +36,7 @@
     background-color: white;
 }
 
-.main-header .lesson-link {
+.cardsdelt-header .lesson-link {
     float: right;
 
     width: 16%;
@@ -48,7 +45,7 @@
     background-color: #3c790a;
 }
 
-.main-header div {
+.cardsdelt-header div {
     /* fix blurriness of children due to them
        being placed on half pixels */
     -webkit-transform-style: preserve-3d;
@@ -56,7 +53,7 @@
     transform-style: preserve-3d;
 }
 
-.main-header div img {
+.cardsdelt-header div img {
     display: block;
 
     margin: auto;

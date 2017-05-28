@@ -1,56 +1,52 @@
 
-var display = document.getElementById("cardsdelt")
-function card(value, suit){
-    this.value = value;
+var display = document.getElementById("cardsdelt");
+
+var deckOfCard;
+
+function Card(rank, suit){
+    this.rank = rank;
     this.suit = suit;
 };
 
-function Deck(){
-    this.deck = new Array(52);
+var Deck = function(){};
 
-    var value = new Array("A", "2", "3","4","5","6","7","8","9","10","Jack","Queen","King");
+Deck.prototype.deckOfCards = function(){
+
+
+    var rank = new Array("A", "2", "3","4","5","6","7","8","9","10","Jack","Queen","King");
     var suit = new Array("Clubs","Dimonds","Hearts","Spades");
+    deckOfCard = new Array(52);
 
-    for(var i = 0; i < 4; i++){
+        for(var i = 0; i < 4; i++){
         for(var j = 0; j < 13; j++){
-            this.deck[i*value.length + j] = new Card(value[j], suite[i]);
+            deckOfCard[j* rank.length + i] = new Card(value[j], suite[i]);
         }
     }
-    this.suffle = suffle;
-    this.deal = deal;
-}
+    return deckOfCard;
+};
 
-function shuffle(){
-    for(var i = 0; i < 10; j++){
-        for(var j = 0; j < this.deck.length; j++){
-           delt = Math.floor(Math.random()* this.deck.length);
-           temp = this.deck[j];
-           this.deck[j] = this.deck[delt];
-           this.deck[delt] = temp;
+Deck.prototype.shuffle = function(){
+    for(var i = 0; i < 2; i++){
+        for(var j = 0; j < deckOfCard.length; j++){
+           var cardsDelt = Math.floor(Math.random()* deckOfCards.length);
+           var temp = deckOfCard[j];
+           deckOfCard[j] = deckOfCard[cardsDelt];
+           deckOfCard[cardsDelt] = temp;
         }
     }
+    display.innerHTML = "deckOfCards";
+    return deckOfCard;
 };
 
 function deal() {
 
-    if (this.deck.length > 0) {
+    if (this.deckOfCards.length > 0) {
         return this.deck.shift();
     }
-    else return null;
-};
-
-var deck = new Deck();
-deck.shuffle();
-for (i = 0; i < 2; i++) {
-    for (j = 0; j < 4; j++) {
-        var Card;
-        Card = deck.deal();
+    else {
+        var error = "You forgot your cards.";
+        return error;
     }
-    display.innerHTML = Card;
-}
-
-
-
-
+};
 
 
