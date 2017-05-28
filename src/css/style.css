@@ -1,0 +1,69 @@
+#main:focus {
+    outline: none;
+}
+
+
+/* ===================================== HEADER STYLE ========================================= */
+
+.main-header {
+    width: 100%;
+    height: 79px;
+
+    background-color: #144e64;}
+
+.main-header .title {
+    float: left;
+    text-transform: uppercase;
+
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+
+    width: 55%;
+
+    padding-left: 5%;
+
+    color: #fff;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-header .zip-link {
+    float: right;
+
+    width: 16%;
+    height: 100%;
+
+    background-color: white;
+}
+
+.main-header .lesson-link {
+    float: right;
+
+    width: 16%;
+    height: 100%;
+
+    background-color: #3c790a;
+}
+
+.main-header div {
+    /* fix blurriness of children due to them
+       being placed on half pixels */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.main-header div img {
+    display: block;
+
+    margin: auto;
+
+    width: 55%;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
