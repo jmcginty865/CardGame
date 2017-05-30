@@ -17,7 +17,9 @@ var Card_1 = require("../models/Card");
 var Deck = (function (_super) {
     __extends(Deck, _super);
     function Deck(Rank, Suit) {
-        return _super.call(this, Rank, Suit) || this;
+        var _this = _super.call(this, Rank, Suit) || this;
+        _this.element;
+        return _this;
     }
     Deck.prototype.Deck = function (Rank, Suit) {
         Rank = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14);
@@ -39,6 +41,7 @@ var Deck = (function (_super) {
     };
     Deck.prototype.Deal = function () {
         if (this.deckOfCards.length > 0) {
+            this.element.innerHTML = "cardsdelt";
             return this.deckOfCards.shift;
         }
         else {
@@ -48,3 +51,4 @@ var Deck = (function (_super) {
     };
     return Deck;
 }(Card_1.Card));
+exports.Deck = Deck;

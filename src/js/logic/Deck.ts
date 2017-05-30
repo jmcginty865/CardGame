@@ -3,11 +3,14 @@ import {Card} from "../models/Card";
  * Created by jennifermcginty on 5/28/17.
  */
 
-class Deck extends Card {
+export class Deck extends Card {
+
+    element: HTMLElement;
 
     private deckOfCards: any;
     constructor(Rank,Suit){
         super(Rank,Suit);
+        this.element;
     }
 
     Deck(Rank,Suit){
@@ -34,6 +37,7 @@ class Deck extends Card {
     }
     Deal(){
         if(this.deckOfCards.length > 0){
+            this.element.innerHTML = "cardsdelt";
             return this.deckOfCards.shift;
         }
         else{
@@ -41,4 +45,5 @@ class Deck extends Card {
             return error;
         }
     }
+
 }
